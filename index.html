@@ -1,148 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link>
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif
+    }
+
+    .title {
+      color: aliceblue;
+      font-size: 50px;
+    }
+
+    .strong {
+      font-weight: 900;
+    }
+
+    .about-me {
+      font-size: 17px;
+    }
+
+    .grid-third {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .skills-container p {
+      margin: 0;
+    }
+  </style>
+
 <body class="w3-light-grey">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="Anton.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Anton Kozak</h2>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Web Developer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Halmstad, Sweden</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>KozakAnton@i.ua</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+46 73-380 42 68</p>
-          <hr>
+    <!-- The Grid -->
+    <div class="w3-row-padding">
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Html</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">40%</div>
-          </div>
-          <p>Css</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:35%">
-              <div class="w3-center w3-text-white">35%</div>
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="Anton.jpg" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+              <h2 class='title'>Anton Kozak</h2>
             </div>
           </div>
-          <p>Java Script</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:45%">45%</div>
-          </div>
-          <p>C#</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:10%">10%</div>
-          </div>
-          <br>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Web Developer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Halmstad, Sweden</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>AntonKozak3533@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+46 73-380 42 68</p>
+            <hr>
+            <div class='about-me'>
+              <h3 style=' font-weight: bolder;'> <i class="fa fa-child fa-fw w3-margin-right w3-text-teal"
+                  aria-hidden="true"></i>About Me</h1>
+                <p> A team player.</p>
+                <p>Driven and have a positive attitude and a flexible mindset.</p>
+                <p>Used to take responsibility for my own working tasks.</p>
+                <p>Analytical and have good problem-solving skills.</p>
+                <p>Curious and passionate about learning new things.</p>
+                <p>Entrepreneurial and I like a fast speed environment.</p>
+            </div>
+            <hr>
+            <p class="w3-xlarge strong"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
+            </p>
+            <div class="skills-container">
+              <div class="column">
+                <p>C#</p>
+                <p>OOP</p>
+                <p>.NET-ramverket</p>
+                <p>REST-APIs</p>
+                <p>Jira</p>
+              </div>
+              <div class="column">
+                <p>ReactJs</p>
+                <p>AngularTs</p>
+                <p>Java Script</p>
+                <p>SQL</p>
+                <p>Git</p>
+              </div>
+            </div>
+            <br>
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
-          </div>
-          <p>Swedish</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
-          </div>
-          <p>Ukrainian</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>Russian</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          
-          <br>
-        </div>
-      </div><br>
+            <p class=" w3-xlarge strong"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal">
+              </i>Languages</p>
+            <p>English, Swedish, Ukrainian, Russian</p>
+            <br>
 
-    <!-- End Left Column -->
-    </div>
+            <p class='w3-xlarge strong'><i class="fa fa-hashtag w3-margin-right w3-text-teal">
+              </i> Find me on social media.</p>
+            <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="HTML tutorial"
+                style="width:42px;height:42px;"></a>
+            <a href="https://www.linkedin.com/in/anton-kozak-004584a2/"><img src="nedladdning.png" alt="HTML tutorial"
+                style="width:42px;height:42px;"></a>
+            <a href="https://github.com/AntonKozak"><img src="github.png" alt="HTML tutorial"
+                style="width:42px;height:42px;"></i></a>
+            <a href="mailto:antonkozak3533@gmail.com"><img src="mail.png" alt="HTML tutorial"
+                style="width:42px;height:42px;"></i></a>
+            <br>
+            <br>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Web Developer </b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2022 <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>I’m currently learning Front End and Back End. I'm looking for a job as a front end developer!.</p>
-          <hr>
+            <p class="w3-xlarge strong"><i class="fa fa-address-card-o fa-fw w3-margin-right w3-text-teal"></i>Hobbies
+            </p>
+            <div class="grid-third">
+              <div class="column">
+                <p>Football</p>
+                <p>Traveling</p>
+                <p>Reading</p>
+              </div>
+              <div class="column">
+                <p>Swimming</p>
+                <p>Running</p>
+                <p>Music</p>
+              </div>
+              <div class="column">
+                <p>Programming</p>
+                <p>Photography</p>
+                <p>Games</p>
+              </div>
+            </div>
+            <br>
+          </div>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Garden worker </b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2022</h6>
-          <p>This was my first work experience in Sweden. Started at Tönnersjö Trädgård AB as an intern after my education. After my internship, I started working as a greenhouse worker.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Trainee</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2013</h6>
-          <p>Gartneriet Kvistgirden A/S Odense, Danmark. I have the opportunity to work with Ellegaard machines as a machine operator and helped to plant and grow cuttings. </p><br>
-        </div>
+        <br>
+
+        <!-- End Left Column -->
       </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Jönköping University</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nuvarande</h6>
-          <p>Webbutvecklare .NET</p>
-          <hr>
+      <!-- Right Column -->
+      <div class="w3-twothird">
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>HMS NetworksIntern,UI/UX Development Halmstad</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2023 <span
+                class="w3-tag w3-teal w3-round">Current</span></h6>
+            <p>I am currently undergoing hands-on training at HMS to become a Full Stack Web Developer.
+              Engaging in practical experiences, I am honing my skills in both front-end and back-end development.
+              This opportunity allows me to apply theoretical knowledge in a real-world setting, contributing to my
+              growth as a versatile and proficient web developer.</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Biltema
+                Warehouse worker
+                Halmstad</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - 2023</h6>
+            <p>Collaborating in team to optimize warehouse
+              processes and achieve collective goals. Picking and
+              packing orders with precision to meet stringent
+              deadlines</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Tönnersjö
+                Trädgård Ab
+                Halmstad</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2022</h6>
+            <p>Executed various tasks related to the daily operations
+              of the greenhouse, including planting, monitoring
+              factors such as temperature, humidity, and light.
+              Implemented quality control measures to guarantee
+              the health and vitality of greenhouse crops. </p><br>
+          </div>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Billa Tserkva National Agrarian University, Ukraina</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2014</h6>
-          <p>Master Degree</p>
-          <hr>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Jönköping University , YH i Värnamo</b></h5>
+            <h5 class="w3-opacity">Higher Vocational
+              Education
+              Wed developer</h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nuvarande</h6>
+            <p>Undergoing study in Web Development with a focus on
+              the .NET stack, preparing for a project-oriented role in
+              creating secure and high-quality web systems.
+              Developing proficiency in modern web technologies
+              and frameworks, including ASP, C#, .NET, MVC, ReactJS,
+              AngularTS. Hands-on experience with cloud services
+              (e.g., Microsoft Azure), version control using GIT, SVN,
+              TFS, and agile methodologies like Scrum and Kanban.</p>
+            <hr>
+          </div>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Udemy, Pluralsight
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 - 2014</h6>
+            <p>AngularTS,C#, SQLite DB, TypeScript, SignalR, C#
+              Intermediate, ReactJS, RxJS.Angular, UnitTesting,
+              AngularStateManagement and others.</p><br>
+          </div>
+
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Billa Tserkva National Agrarian University, Ukraina</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 - 2014</h6>
+            <p>Master Degree</p><br>
+          </div>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Billa Tserkva National Agrarian University, Ukraina</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 - 2013</h6>
-          <p>Bachelor Degree</p><br>
+
+        <!-- References Section -->
+        <div class="w3-container w3-card w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-users fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>References</h2>
+          <div class="w3-container">
+            <div class="skills-container">
+              <div class="column">
+                <h5 class="w3-opacity"><b>Johan Häggström
+                  </b></h5>
+                <p>Senior Development
+                  Engineer
+                </p>
+                <p><a href="mailto:jon@hms.se"><img src="mail.png" alt="HTML tutorial"
+                      style="width:42px;height:42px; margin-right: 15px;">
+                    </i>jon@hms.se</a></p>
+                <a>tel:+46738404133 </a>
+                <hr>
+              </div>
+
+              <div class="skills-container">
+                <div class="column">
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Roman Matvichuk</b></h5>
+                    <p> Development Engineer </p>
+                    <p><a href="mailto:rom@hms.se"><img src="mail.png" alt="HTML tutorial"
+                          style="width:42px;height:42px; margin-right: 15px;"></i>rom@hms.se</a></p>
+                    <a>tel:+46739764913</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- End Right Column -->
         </div>
+
+        <!-- End Grid -->
       </div>
 
-    <!-- End Right Column -->
+      <!-- End Page Container -->
     </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
-  <a href="https://www.linkedin.com/in/anton-kozak-004584a2/"><img src="nedladdning.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
-  <a href="https://github.com/AntonKozak"><img src="github.png" alt="HTML tutorial" style="width:42px;height:42px;"></i></a>
-  <a href="mailto:kozakanton@i.ua"><img src="mail.png" alt="HTML tutorial" style="width:42px;height:42px;"></i></a>
-</footer>
+    <footer class="w3-container w3-teal w3-center w3-margin-top">
+      <p>Find me on social media.</p>
+      <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="HTML tutorial"
+          style="width:42px;height:42px;"></a>
+      <a href="https://www.linkedin.com/in/anton-kozak-004584a2/"><img src="nedladdning.png" alt="HTML tutorial"
+          style="width:42px;height:42px;"></a>
+      <a href="https://github.com/AntonKozak"><img src="github.png" alt="HTML tutorial"
+          style="width:42px;height:42px;"></i></a>
+      <a href="mailto:kozakanton@i.ua"><img src="mail.png" alt="HTML tutorial" style="width:42px;height:42px;"></i></a>
+    </footer>
 
 </body>
+
 </html>
