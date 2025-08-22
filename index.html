@@ -5,26 +5,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Anton Kozak — CV</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto:wght@300;400;700&display=swap'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link>
+
   <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto", sans-serif
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #14b8a6; /* teal-500 */
+      --chip-bg: #e0f2f1;
+      --chip-fg: #004d40;
+      --border: #e5e7eb;
+    }
+
+    html, body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Inter", "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      color: var(--text);
     }
 
     .title {
-      color: aliceblue;
-      font-size: 50px;
+      color: #fff;
+      font-size: 46px;
+      text-shadow: 0 2px 20px rgba(0,0,0,.35);
     }
 
     .strong {
@@ -49,8 +55,58 @@
 
     .skills-container p {
       margin: 0;
+      display: inline-block;
+      background: var(--chip-bg);
+      color: var(--chip-fg);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    /* subtle card polish */
+    .w3-card, .w3-card-4 { border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(2,12,27,0.06); }
+    .w3-container h2.w3-text-grey { letter-spacing: .3px; }
+
+    /* page bg */
+    body.w3-light-grey { background: linear-gradient(180deg, var(--bg), #eef2f7); }
+
+    /* photo header overlay */
+    .w3-display-container img { filter: saturate(1.05) contrast(1.02); }
+    .w3-display-bottomleft { background: linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,0)); width: 100%; padding: 24px 18px; }
+
+    /* chips utility (used for languages/hobbies too) */
+    .chip-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { background: var(--chip-bg); color: var(--chip-fg); padding: 6px 12px; border-radius: 999px; font-size: 14px; }
+
+    /* Experience timeline */
+    .experience { position: relative; }
+    .experience .w3-container { position: relative; border-left: 2px solid var(--border); padding-left: 22px; }
+    .experience .w3-container:first-of-type { margin-top: 6px; }
+    .experience .w3-container::before { content: ""; position: absolute; left: -7px; top: 24px; width: 12px; height: 12px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 0 3px #e6fffb; }
+
+    /* header icons */
+    .social-row img { filter: grayscale(20%); transition: transform .15s ease, filter .2s ease; }
+    .social-row img:hover { filter: none; transform: translateY(-2px) scale(1.03); }
+
+    /* dark mode */
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0b1220; --card: #0f172a; --text: #e5e7eb; --muted: #a1a1aa; --border: #1f2937; --chip-bg: #064e3b; --chip-fg: #a7f3d0; }
+      body.w3-light-grey { background: linear-gradient(180deg, #0b1220, #0f172a); }
+      .w3-white { background-color: var(--card) !important; color: var(--text); }
+      .w3-text-grey { color: var(--text) !important; }
+      .w3-teal { background-color: #115e59 !important; }
+    }
+
+    /* print-friendly */
+    @media print {
+      body { background: #fff !important; }
+      .w3-card, .w3-card-4 { box-shadow: none; }
+      .title { color: #000; text-shadow: none; }
+      a::after { content: " (" attr(href) ")"; font-size: 12px; }
     }
   </style>
+
+</head>
 
 <body class="w3-light-grey">
 
@@ -63,7 +119,7 @@
       <!-- Left Column -->
       <div class="w3-third">
 
-        <div class="w3-white w3-text-grey w3-card-4">
+  <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
             <img src="Anton.jpg" style="width:100%" alt="Avatar">
             <div class="w3-display-bottomleft w3-container w3-text-black">
@@ -73,14 +129,14 @@
           <div class="w3-container">
             <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Web Developer</p>
             <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Halmstad, Sweden</p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Bila Tserkva, Ukraine</p>
+    <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Bila Tserkva, Ukraine</p>
             <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>AntonKozak3533@gmail.com</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>KozakAnton@i.ua</p>
+    <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>KozakAnton@i.ua</p>
             <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+46 73-380 42 68</p>
             <hr>
             <div class='about-me'>
               <h3 style=' font-weight: bolder;'> <i class="fa fa-child fa-fw w3-margin-right w3-text-teal"
-                  aria-hidden="true"></i>About Me</h1>
+      aria-hidden="true"></i>About Me</h3>
                 <p> A team player.</p>
                 <p>Driven and have a positive attitude and a flexible mindset.</p>
                 <p>Used to take responsibility for my own working tasks.</p>
@@ -98,14 +154,14 @@
               <div class="column">
                 <p>C#</p>
                 <p>OOP</p>
-                <p>.NET-framework</p>
-                <p>REST-APIs</p>
+                <p>.NET</p>
+                <p>REST APIs</p>
                 <p>Jira</p>
               </div>
               <div class="column">
-                <p>ReactJs</p>
-                <p>AngularTs</p>
-                <p>Java Script</p>
+                <p>React</p>
+                <p>Angular</p>
+                <p>JavaScript</p>
                 <p>SQL</p>
                 <p>Git</p>
               </div>
@@ -114,20 +170,25 @@
 
             <p class=" w3-xlarge strong"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal">
               </i>Languages</p>
-            <p>English, Swedish, Ukrainian, Russian</p>
+            <div class="chip-cloud" style="margin-top: 4px;">
+              <span class="chip">English</span>
+              <span class="chip">Swedish</span>
+              <span class="chip">Ukrainian</span>
+              <span class="chip">Russian</span>
+            </div>
             <br>
 
             <p class='w3-xlarge strong'><i class="fa fa-hashtag w3-margin-right w3-text-teal">
               </i> Find me on social media.</p>
-              <div style="width: 100%; display: flex; justify-content: center;">
-                
+              <div class="social-row" style="width: 100%; display: flex; justify-content: center;">
+
                 <div class="grid-third">
                 <div class="column">
                   <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
                   <br>
                  <a href="https://www.linkedin.com/in/anton-kozak-004584a2/" ><img src="nedladdning.png" alt="HTML tutorial" style="width:42px;height:42px;margin-top: 25px;"></a>
                   </div>
-              
+
                 <div class="column">
                   <a href="https://github.com/AntonKozak"><img src="github.png" alt="HTML tutorial"
                 style="width:42px;height:42px;"></i></a>
@@ -138,30 +199,23 @@
                 </div>
 
               </div>
-              
-            
-            
+
+
+
             <br>
             <br>
 
-            <p class="w3-xlarge strong"><i class="fa fa-address-card-o fa-fw w3-margin-right w3-text-teal"></i>Hobbies
-            </p>
-            <div class="grid-third">
-              <div class="column">
-                <p>Football</p>
-                <p>Traveling</p>
-                <p>Reading</p>
-              </div>
-              <div class="column">
-                <p>Swimming</p>
-                <p>Running</p>
-                <p>Music</p>
-              </div>
-              <div class="column">
-                <p>Programming</p>
-                <p>Photography</p>
-                <p>Games</p>
-              </div>
+            <p class="w3-xlarge strong"><i class="fa fa-address-card-o fa-fw w3-margin-right w3-text-teal"></i>Hobbies</p>
+            <div class="chip-cloud">
+              <span class="chip">Football</span>
+              <span class="chip">Traveling</span>
+              <span class="chip">Reading</span>
+              <span class="chip">Swimming</span>
+              <span class="chip">Running</span>
+              <span class="chip">Music</span>
+              <span class="chip">Programming</span>
+              <span class="chip">Photography</span>
+              <span class="chip">Games</span>
             </div>
             <br>
           </div>
@@ -174,11 +228,17 @@
       <!-- Right Column -->
       <div class="w3-twothird">
 
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
+  <div class="w3-container w3-card w3-white w3-margin-bottom experience">
           <h2 class="w3-text-grey w3-padding-16"><i
               class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>HMS NetworksIntern,UI/UX Development Halmstad</b></h5>
+            <h5 class="w3-opacity"><b>DHSolutions AB — Konsultutvecklare, Halmstad</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2025</h6>
+            <p>Som konsultutvecklare hos DHSolutions AB arbetade jag med ett brett spektrum av teknologier och system, inklusive React, Angular, .NET och SQL. Jag var involverad i utvecklingen av flera integrationer samt skapandet av en Azure DevOps Extension, vilket möjliggjorde en mer effektiv hantering av projekt och uppgifter. Arbetet bedrevs enligt agila metoder med daglig användning av Azure DevOps och Azure‑miljöer.</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>HMS Networks — Intern, UI/UX Development, Halmstad</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2023 <span
                 class="w3-tag w3-teal w3-round">Current</span></h6>
             <p>I am currently undergoing hands-on training at HMS to become a Full Stack Web Developer.
@@ -219,22 +279,22 @@
 
             <div class="w3-container">
               <div style="display: flex;">
-              <div style="flex-grow: 1" > 
+              <div style="flex-grow: 1" >
               <h5 class="w3-opacity"><b>Halmstad, Sweden</b></h5>
               <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2024 - 2024</h6>
                   <p >Foundational C# with <br> Microsoft Certification Exam</p>
-                  
+
                 </div>
                 <img src="Certification.png" alt="Certification from Microsoft" style="width: 30%; flex-grow: 8">
               </div>
-                
+
 
             </div>
 
             <h5 class="w3-opacity"><b>Jönköping University , YH i Värnamo</b></h5>
             <h5 class="w3-opacity">Higher Vocational
               Education
-              Wed developer</h5>
+              Web developer</h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - 2024</h6>
             <p>Undergoing study in Web Development with a focus on
               the .NET stack, preparing for a project-oriented role in
@@ -262,46 +322,11 @@
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 - 2014</h6>
             <p>Master Degree</p><br>
           </div>
-        
-          
+
+
         </div>
 
-        <!-- References Section -->
-        <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-users fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>References</h2>
-          <div class="w3-container">
-            <div class="skills-container">
-              <div class="column">
-                <h5 class="w3-opacity"><b>Johan Häggström
-                  </b></h5>
-                <p>Senior Development
-                  Engineer
-                </p>
-                <p><a href="mailto:jon@hms.se"><img src="mail.png" alt="HTML tutorial"
-                      style="width:42px;height:42px; margin-right: 15px;">
-                    </i>joh@hms.se</a></p>
-                <a>tel:+46738404133 </a>
-                <hr>
-              </div>
-
-              <div class="skills-container">
-                <div class="column">
-                  <div class="w3-container">
-                    <h5 class="w3-opacity"><b>Roman Matvichuk</b></h5>
-                    <p> Development Engineer </p>
-                    <p><a href="mailto:rom@hms.se"><img src="mail.png" alt="HTML tutorial"
-                          style="width:42px;height:42px; margin-right: 15px;"></i>rom@hms.se</a></p>
-                    <a>tel:+46739764913</a>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- End Right Column -->
-        </div>
+  <!-- End Right Column -->
 
         <!-- End Grid -->
       </div>
@@ -309,15 +334,15 @@
       <!-- End Page Container -->
     </div>
 
-    <footer class="w3-container w3-teal w3-center w3-margin-top">
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
       <p>Find me on social media.</p>
-      <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="HTML tutorial"
-          style="width:42px;height:42px;"></a>
-      <a href="https://www.linkedin.com/in/anton-kozak-004584a2/"><img src="nedladdning.png" alt="HTML tutorial"
-          style="width:42px;height:42px;"></a>
-      <a href="https://github.com/AntonKozak"><img src="github.png" alt="HTML tutorial"
-          style="width:42px;height:42px;"></i></a>
-      <a href="mailto:kozakanton@i.ua"><img src="mail.png" alt="HTML tutorial" style="width:42px;height:42px;"></i></a>
+    <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="Facebook"
+      style="width:42px;height:42px;filter: grayscale(20%);"></a>
+    <a href="https://www.linkedin.com/in/anton-kozak-004584a2/"><img src="nedladdning.png" alt="LinkedIn"
+      style="width:42px;height:42px;filter: grayscale(20%);"></a>
+    <a href="https://github.com/AntonKozak"><img src="github.png" alt="GitHub"
+      style="width:42px;height:42px;filter: grayscale(20%);"></i></a>
+    <a href="mailto:kozakanton@i.ua"><img src="mail.png" alt="Email" style="width:42px;height:42px;filter: grayscale(20%);"></i></a>
     </footer>
 
 </body>
