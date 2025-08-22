@@ -7,104 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anton Kozak — CV</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto:wght@300;400;700&display=swap'>
+  <link rel='stylesheet'
+    href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto:wght@300;400;700&display=swap'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #14b8a6; /* teal-500 */
-      --chip-bg: #e0f2f1;
-      --chip-fg: #004d40;
-      --border: #e5e7eb;
-    }
-
-    html, body, h1, h2, h3, h4, h5, h6 {
-      font-family: "Inter", "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-      color: var(--text);
-    }
-
-    .title {
-      color: #fff;
-      font-size: 46px;
-      text-shadow: 0 2px 20px rgba(0,0,0,.35);
-    }
-
-    .strong {
-      font-weight: 900;
-    }
-
-    .about-me {
-      font-size: 17px;
-    }
-
-    .grid-third {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .skills-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .skills-container p {
-      margin: 0;
-      display: inline-block;
-      background: var(--chip-bg);
-      color: var(--chip-fg);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 14px;
-    }
-
-    /* subtle card polish */
-    .w3-card, .w3-card-4 { border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(2,12,27,0.06); }
-    .w3-container h2.w3-text-grey { letter-spacing: .3px; }
-
-    /* page bg */
-    body.w3-light-grey { background: linear-gradient(180deg, var(--bg), #eef2f7); }
-
-    /* photo header overlay */
-    .w3-display-container img { filter: saturate(1.05) contrast(1.02); }
-  .w3-display-bottomleft { background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,0)); width: 100%; padding: 24px 18px; }
-
-    /* chips utility (used for languages/hobbies too) */
-    .chip-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
-    .chip { background: var(--chip-bg); color: var(--chip-fg); padding: 6px 12px; border-radius: 999px; font-size: 14px; }
-
-    /* Experience timeline */
-    .experience { position: relative; }
-    .experience .w3-container { position: relative; border-left: 2px solid var(--border); padding-left: 22px; }
-    .experience .w3-container:first-of-type { margin-top: 6px; }
-    .experience .w3-container::before { content: ""; position: absolute; left: -7px; top: 24px; width: 12px; height: 12px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 0 3px #e6fffb; }
-
-    /* header icons */
-    .social-row img { filter: grayscale(20%); transition: transform .15s ease, filter .2s ease; }
-    .social-row img:hover { filter: none; transform: translateY(-2px) scale(1.03); }
-
-    /* dark mode: keep light theme for readability */
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #f5f7fb; --card: #ffffff; --text: #111827; --muted: #374151; --border: #e5e7eb; --chip-bg: #e0f2f1; --chip-fg: #004d40; }
-      body.w3-light-grey { background: linear-gradient(180deg, var(--bg), #eef2f7); }
-      .w3-white { background-color: var(--card) !important; color: var(--text); }
-      .w3-text-grey { color: var(--text) !important; }
-      .w3-teal { background-color: #14b8a6 !important; }
-    }
-
-    /* print-friendly */
-    @media print {
-      body { background: #fff !important; }
-      .w3-card, .w3-card-4 { box-shadow: none; }
-      .title { color: #000; text-shadow: none; }
-      a::after { content: " (" attr(href) ")"; font-size: 12px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -112,14 +19,9 @@
 
   <!-- Page Container -->
   <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-    <!-- The Grid -->
-    <div class="w3-row-padding">
-
-      <!-- Left Column -->
-      <div class="w3-third">
-
-  <div class="w3-white w3-text-grey w3-card-4">
+    <div class="cv-grid">
+      <div class="cv-left">
+        <div class="w3-white w3-text-grey w3-card-4" style="flex:1;">
           <div class="w3-display-container">
             <img src="Anton.jpg" style="width:100%" alt="Avatar">
             <div class="w3-display-bottomleft w3-container w3-text-black">
@@ -127,124 +29,148 @@
             </div>
           </div>
           <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Web Developer</p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Halmstad, Sweden</p>
-    <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Bila Tserkva, Ukraine</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>AntonKozak3533@gmail.com</p>
-    <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>KozakAnton@i.ua</p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+46 73-380 42 68</p>
-            <hr>
+
+            <hr style="margin: 18px 0;">
             <div class='about-me'>
-              <h3 style=' font-weight: bolder;'> <i class="fa fa-child fa-fw w3-margin-right w3-text-teal"
-      aria-hidden="true"></i>About Me</h3>
-                <p> A team player.</p>
-                <p>Driven and have a positive attitude and a flexible mindset.</p>
-                <p>Used to take responsibility for my own working tasks.</p>
-                <p>Analytical and have good problem-solving skills.</p>
-                <p>Curious and passionate about learning new things.</p>
-                <p>Entrepreneurial and I like a fast speed environment.</p>
-                <p>I excel in teamwork, fostering an environment of collaboration and mutual respect. </p>
-                <p>My drive and optimism contribute to a positive atmosphere, while my adaptable nature allows me to thrive in dynamic situations. </p>
-                <p>Fuelled by curiosity, I am constantly seeking opportunities to expand my knowledge and skill set.  </p>
+              <h3 style='font-weight: bolder;'> <i class="fa fa-child fa-fw w3-margin-right w3-text-teal"
+                  aria-hidden="true"></i>About Me</h3>
+              <p><b>Anton Kozak</b> — Fullstack Developer, Halmstad, Snöstorp</p>
+              <p>📧 <a href="mailto:AntonKozak3533@gmail.com">AntonKozak3533@gmail.com</a> &nbsp; 📞 +46 73-380 42 68
+                &nbsp; 🌐 <a href="https://github.com/AntonKozak" target="_blank">github.com/AntonKozak</a></p>
+              <hr>
+              <p>I am a passionate and goal-oriented fullstack developer with a strong interest in both frontend and
+                backend. My education in system development has given me solid knowledge in C#, .NET, ASP.NET, Angular,
+                React, TypeScript, and SQL, and I continue to develop my skills every day.</p>
+              <p>From November 2023 to May 2024, I had the opportunity to work with the Anybus Communicator team at HMS,
+                where I contributed to the development of a complex industrial software solution. I quickly became part
+                of the team and made concrete contributions to the codebase. This experience gave me valuable insight
+                into how a professional development team works with codebases, communication, and practical
+                problem-solving.</p>
+              <p>Between March and May 2025, I also completed a rewarding internship at DH Solutions, participating in
+                six different projects. I worked closely with both clients and colleagues and was trusted to contribute
+                technical solutions. Among other things, I developed an Azure DevOps Extension and worked with modern
+                technologies in both frontend and backend.</p>
+              <p><b>References from LinkedIn:</b></p>
+              <blockquote
+                style="border-left: 3px solid #009688; margin: 8px 0; padding-left: 12px; color: #444; background: #f7f7f7;">
+                "Anton is extremely ambitious, with a burning interest in development and problem-solving. He is social,
+                cheerful, and a joy to have on the team. He combines technical talent with warmth and helpfulness – a
+                colleague you truly enjoy working with."<br>
+                <span style="font-style: italic;">– Mattias Arnesson, Tech Lead, DH Solutions</span>
+              </blockquote>
+              <blockquote
+                style="border-left: 3px solid #009688; margin: 8px 0; padding-left: 12px; color: #444; background: #f7f7f7;">
+                "Anton has great potential as a developer and already performs like someone with more experience. He is
+                curious, thorough, self-driven, and always delivers good results."<br>
+                <span style="font-style: italic;">– Roman Matvichuk, Senior Software Engineer, DH Solutions</span>
+              </blockquote>
+              <p>I always work purposefully and efficiently, with a strong focus on code quality and teamwork. I am
+                solution-oriented, communicative, and enjoy taking responsibility – whether it is new challenges in code
+                or collaboration with others in the team.</p>
+              <p>I look forward to contributing my commitment and expertise to your team. Feel free to contact me for an
+                interview or if you want to know more.</p>
+              <p style="margin-top: 12px;">Best regards,<br><b>Anton Kozak</b></p>
             </div>
-            <hr>
+            <hr style="margin: 18px 0;">
             <p class="w3-xlarge strong"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
             </p>
-            <div class="skills-container">
-              <div class="column">
-                <p>C#</p>
-                <p>OOP</p>
-                <p>.NET</p>
-                <p>REST APIs</p>
-                <p>Jira</p>
-              </div>
-              <div class="column">
-                <p>React</p>
-                <p>Angular</p>
-                <p>JavaScript</p>
-                <p>SQL</p>
-                <p>Git</p>
+            <div class="skills-card">
+              <div class="skills-list">
+                <span class="skill"><i class="fa fa-code"></i> C#</span>
+                <span class="skill"><i class="fa fa-cubes"></i> OOP</span>
+                <span class="skill"><i class="fa fa-dot-circle-o"></i> .NET</span>
+                <span class="skill"><i class="fa fa-exchange"></i> REST APIs</span>
+                <span class="skill"><i class="fa fa-tasks"></i> Jira</span>
+                <span class="skill"><i class="fa fa-react"></i> React</span>
+                <span class="skill"><i class="fa fa-angular"></i> Angular</span>
+                <span class="skill"><i class="fa fa-jsfiddle"></i> JavaScript</span>
+                <span class="skill"><i class="fa fa-database"></i> SQL</span>
+                <span class="skill"><i class="fa fa-git"></i> Git</span>
               </div>
             </div>
             <br>
 
-            <p class=" w3-xlarge strong"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal">
-              </i>Languages</p>
-            <div class="chip-cloud" style="margin-top: 4px;">
-              <span class="chip">English</span>
-              <span class="chip">Swedish</span>
-              <span class="chip">Ukrainian</span>
-              <span class="chip">Russian</span>
+            <p class=" w3-xlarge strong"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</p>
+            <div class="languages-card">
+              <div class="languages-list">
+                <span class="language"><i class="fa fa-flag"></i> English</span>
+                <span class="language"><i class="fa fa-flag"></i> Swedish</span>
+                <span class="language"><i class="fa fa-flag"></i> Ukrainian</span>
+                <span class="language"><i class="fa fa-flag"></i> Russian</span>
+              </div>
             </div>
             <br>
 
-            <p class='w3-xlarge strong'><i class="fa fa-hashtag w3-margin-right w3-text-teal">
-              </i> Find me on social media.</p>
-              <div class="social-row" style="width: 100%; display: flex; justify-content: center;">
-
-                <div class="grid-third">
-                <div class="column">
-                  <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
-                  <br>
-                 <a href="https://www.linkedin.com/in/anton-kozak-004584a2/" ><img src="nedladdning.png" alt="HTML tutorial" style="width:42px;height:42px;margin-top: 25px;"></a>
-                  </div>
-
-                <div class="column">
-                  <a href="https://github.com/AntonKozak"><img src="github.png" alt="HTML tutorial"
-                style="width:42px;height:42px;"></i></a>
-                <br>
-            <a href="mailto:antonkozak3533@gmail.com"><img src="mail.png" alt="HTML tutorial"
-                style="width:42px;height:42px;margin-top: 25px;"></i></a>
-                  </div>
-                </div>
-
+            <div class="social-card">
+              <span class="social-title"><i class="fa fa-hashtag w3-margin-right w3-text-teal"></i>Find me on social
+                media
+              </span>
+              <div class="social-list">
+                <a href="https://www.facebook.com/anton.kozak.5/" title="Facebook" class="social-link">
+                  <img src="facebook.png" alt="Facebook">
+                  <span>Facebook</span>
+                </a>
+                <a href="https://www.linkedin.com/in/anton-kozak-004584a2/" title="LinkedIn" class="social-link">
+                  <img src="nedladdning.png" alt="LinkedIn">
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/AntonKozak" title="GitHub" class="social-link">
+                  <img src="github.png" alt="GitHub">
+                  <span>GitHub</span>
+                </a>
+                <a href="mailto:antonkozak3533@gmail.com" title="Email" class="social-link">
+                  <img src="mail.png" alt="Email">
+                  <span>Email</span>
+                </a>
               </div>
-
-
+            </div>
 
             <br>
             <br>
 
-            <p class="w3-xlarge strong"><i class="fa fa-address-card-o fa-fw w3-margin-right w3-text-teal"></i>Hobbies</p>
-            <div class="chip-cloud">
-              <span class="chip">Football</span>
-              <span class="chip">Traveling</span>
-              <span class="chip">Reading</span>
-              <span class="chip">Swimming</span>
-              <span class="chip">Running</span>
-              <span class="chip">Music</span>
-              <span class="chip">Programming</span>
-              <span class="chip">Photography</span>
-              <span class="chip">Games</span>
+            <p class="w3-xlarge strong"><i class="fa fa-address-card-o fa-fw w3-margin-right w3-text-teal"></i>Hobbies
+            </p>
+            <div class="hobbies-card">
+              <div class="hobbies-list">
+                <span class="hobby"><i class="fa fa-futbol-o"></i> Football</span>
+                <span class="hobby"><i class="fa fa-plane"></i> Traveling</span>
+                <span class="hobby"><i class="fa fa-book"></i> Reading</span>
+                <span class="hobby"><i class="fa fa-tint"></i> Swimming</span>
+                <span class="hobby"><i class="fa fa-bolt"></i> Running</span>
+                <span class="hobby"><i class="fa fa-music"></i> Music</span>
+                <span class="hobby"><i class="fa fa-code"></i> Programming</span>
+                <span class="hobby"><i class="fa fa-camera"></i> Photography</span>
+                <span class="hobby"><i class="fa fa-gamepad"></i> Games</span>
+              </div>
             </div>
             <br>
           </div>
         </div>
         <br>
-
-        <!-- End Left Column -->
       </div>
-
-      <!-- Right Column -->
-      <div class="w3-twothird">
-
-  <div class="w3-container w3-card w3-white w3-margin-bottom experience">
+      <div class="cv-right">
+        <div class="w3-container w3-card w3-white w3-margin-bottom experience" style="flex:1;">
           <h2 class="w3-text-grey w3-padding-16"><i
               class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>DHSolutions AB — Konsultutvecklare, Halmstad</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2025</h6>
-            <p>Som konsultutvecklare hos DHSolutions AB arbetade jag med ett brett spektrum av teknologier och system, inklusive React, Angular, .NET och SQL. Jag var involverad i utvecklingen av flera integrationer samt skapandet av en Azure DevOps Extension, vilket möjliggjorde en mer effektiv hantering av projekt och uppgifter. Arbetet bedrevs enligt agila metoder med daglig användning av Azure DevOps och Azure‑miljöer.</p>
+            <h5 class="w3-opacity"><b>DHSolutions AB — Consultant Developer, Halmstad</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2025 – June 2025</h6>
+            <p>As a consultant developer at DHSolutions AB, I contributed to a variety of projects using technologies
+              such
+              as React, Angular, .NET, and SQL. My responsibilities included developing integrations and building an
+              Azure
+              DevOps Extension to streamline project and task management. I worked in a fast-paced, agile environment,
+              collaborating daily with colleagues and clients in Azure DevOps and Azure cloud platforms.</p>
             <hr>
           </div>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>HMS Networks — Intern, UI/UX Development, Halmstad</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2023 <span
-                class="w3-tag w3-teal w3-round">Current</span></h6>
-            <p>I am currently undergoing hands-on training at HMS to become a Full Stack Web Developer.
-              Engaging in practical experiences, I am honing my skills in both front-end and back-end development.
-              This opportunity allows me to apply theoretical knowledge in a real-world setting, contributing to my
-              growth as a versatile and proficient web developer.</p>
+            <h5 class="w3-opacity"><b>HMS Networks — UI/UX Developer, Halmstad</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>November 2023 – June 2024</h6>
+            <p>During my internship at HMS Networks, I focused on both frontend and backend web development with
+              AngularTS
+              and C#. I designed and implemented user-centric, responsive solutions, participated in testing, and
+              contributed to team-based development in an agile setting. I quickly adapted to new challenges, acquired
+              advanced technical skills, and gained valuable experience working on real-world products.</p>
             <hr>
           </div>
           <div class="w3-container">
@@ -272,17 +198,18 @@
         </div>
 
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-
-          <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          <h2 class="w3-text-grey w3-padding-16"
+            style="background: var(--header-gradient); color: #fff; border-radius: 8px; padding: 8px 18px; margin-bottom: 18px; letter-spacing: 1px;">
+            <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education
+          </h2>
           <div class="w3-container">
 
             <div class="w3-container">
               <div style="display: flex;">
-              <div style="flex-grow: 1" >
-              <h5 class="w3-opacity"><b>Halmstad, Sweden</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2024 - 2024</h6>
-                  <p >Foundational C# with <br> Microsoft Certification Exam</p>
+                <div style="flex-grow: 1">
+                  <h5 class="w3-opacity"><b>Halmstad, Sweden</b></h5>
+                  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2024 - 2024</h6>
+                  <p>Foundational C# with <br> Microsoft Certification Exam</p>
 
                 </div>
                 <img src="Certification.png" alt="Certification from Microsoft" style="width: 30%; flex-grow: 8">
@@ -291,58 +218,107 @@
 
             </div>
 
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Lexicon AB, Linköping</b></h5>
+              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2025 - March 2026</h6>
+              <p><b>IT Advanced/Programmer AI</b><br>
+                Duration: 36 weeks<br>
+                Location: Västra Svedengatan 10, Linköping<br>
+                The purpose of the program is to provide advanced and further education for individuals with existing
+                programming knowledge.<br>
+                The specialization in programming aims to develop skills in programming and IT systems, applications, or
+                system components. The curriculum covers system development, frontend, backend, fullstack, and
+                application development in the chosen language, as well as fundamentals of Azure AI, including AI
+                services, machine learning, data management, and advanced AI applications.<br>
+                The program can be completed both remotely and on-site.<br>
+                The vocational training lasts 36 weeks, including 12 weeks of workplace-based learning (APL) at a
+                company.<br>
+                <b>Modules:</b><br>
+                • Workplace-based learning (APL) – 60 days<br>
+                • Programming – 20 days<br>
+                • Database programming/development – 10 days<br>
+                • Service knowledge – 5 days<br>
+                • Frontend development – 10 days<br>
+                • Advanced programming – 30 days<br>
+                • Application development – 15 days<br>
+                • Backend programming – 10 days<br>
+                • AI Azure – 20 days<br>
+                <b>Requirements:</b><br>
+                • Previous education and/or work experience in IT or strong interest and knowledge in programming or
+                other IT-related areas.<br>
+                • English proficiency at high school level or equivalent.<br>
+                • Sufficient Swedish language skills to benefit from the program.<br>
+                <b>Financial support and accessibility:</b><br>
+                You may be eligible for financial support during the program. Contact us for details.<br>
+              </p>
+            </div>
+
             <h5 class="w3-opacity"><b>Jönköping University , YH i Värnamo</b></h5>
-            <h5 class="w3-opacity">Higher Vocational
-              Education
-              Web developer</h5>
+            <h5 class="w3-opacity">Higher Vocational Education — Web Developer</h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - 2024</h6>
-            <p>Undergoing study in Web Development with a focus on
-              the .NET stack, preparing for a project-oriented role in
-              creating secure and high-quality web systems.
-              Developing proficiency in modern web technologies
-              and frameworks, including ASP, C#, .NET, MVC, ReactJS,
-              AngularTS. Hands-on experience with cloud services
-              (e.g., Microsoft Azure), version control using GIT, SVN,
-              TFS, and agile methodologies like Scrum and Kanban.</p>
+            <p>
+              100 YH credits (Yhp) = one semester full-time<br>
+              <b>Year 1:</b><br>
+              • Web Application MVP, 50 yhp<br>
+              • Object-Oriented Programming with C#, 25 yhp<br>
+              • Dynamic Web Systems 1, 25 yhp<br>
+              • Dynamic Web Systems 2, 25 yhp<br>
+              • Business Acumen for IT, 25 yhp<br>
+              • Client Programming, 50 yhp<br>
+              <b>Year 2:</b><br>
+              • Web Applications with Real-Time Communication, 50 yhp<br>
+              • Work-Based Learning 1, 50 yhp<br>
+              • Business Development for IT, 25 yhp<br>
+              • Thesis Project, 25 yhp<br>
+              • Work-Based Learning 2, 50 yhp<br>
+              <b>Total: 400 yhp</b><br>
+              Studied Web Development with a focus on the .NET stack, preparing for a project-oriented role in creating
+              secure and high-quality web systems. Developed proficiency in modern web technologies and frameworks,
+              including ASP, C#, .NET, MVC, ReactJS, AngularTS. Hands-on experience with cloud services (e.g., Microsoft
+              Azure), version control using GIT, SVN, TFS, and agile methodologies like Scrum and Kanban.
+            </p>
             <hr>
           </div>
 
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>Udemy, Pluralsight
-              </b></h5>
+            <h5 class="w3-opacity"><b>Udemy, Pluralsight</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - 2024</h6>
-            <p>AngularTS,C#, SQLite DB, TypeScript, SignalR, C#
-              Intermediate, ReactJS, RxJS.Angular, UnitTesting,
-              AngularStateManagement and others.</p><br>
+            <p>Courses in AngularTS, C#, SQLite DB, TypeScript, SignalR, C# Intermediate, ReactJS, RxJS, Angular, Unit
+              Testing, Angular State Management, and more.</p><br>
           </div>
 
 
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>Billa Tserkva National Agrarian University, Ukraina</b></h5>
+            <h5 class="w3-opacity"><b>Bila Tserkva National Agrarian University, Ukraine</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 - 2014</h6>
-            <p>Master Degree</p><br>
+            <p>Master's Degree</p><br>
           </div>
 
 
         </div>
 
-  <!-- End Right Column -->
-
-        <!-- End Grid -->
+        <!-- End Right Column -->
       </div>
-
-      <!-- End Page Container -->
     </div>
 
-  <footer class="w3-container w3-teal w3-center w3-margin-top">
-      <p>Find me on social media.</p>
-    <a href="https://www.facebook.com/anton.kozak.5/"><img src="facebook.png" alt="Facebook"
-      style="width:42px;height:42px;filter: grayscale(20%);"></a>
-    <a href="https://www.linkedin.com/in/anton-kozak-004584a2/"><img src="nedladdning.png" alt="LinkedIn"
-      style="width:42px;height:42px;filter: grayscale(20%);"></a>
-    <a href="https://github.com/AntonKozak"><img src="github.png" alt="GitHub"
-      style="width:42px;height:42px;filter: grayscale(20%);"></i></a>
-    <a href="mailto:kozakanton@i.ua"><img src="mail.png" alt="Email" style="width:42px;height:42px;filter: grayscale(20%);"></i></a>
+    <footer class="modern-footer">
+      <div class="footer-content">
+        <span class="footer-title">Connect with me</span>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/anton.kozak.5/" title="Facebook" class="footer-icon">
+            <img src="facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.linkedin.com/in/anton-kozak-004584a2/" title="LinkedIn" class="footer-icon">
+            <img src="nedladdning.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/AntonKozak" title="GitHub" class="footer-icon">
+            <img src="github.png" alt="GitHub">
+          </a>
+          <a href="mailto:kozakanton@i.ua" title="Email" class="footer-icon">
+            <img src="mail.png" alt="Email">
+          </a>
+        </div>
+      </div>
     </footer>
 
 </body>
