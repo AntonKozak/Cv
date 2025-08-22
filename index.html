@@ -72,7 +72,7 @@
 
     /* photo header overlay */
     .w3-display-container img { filter: saturate(1.05) contrast(1.02); }
-    .w3-display-bottomleft { background: linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,0)); width: 100%; padding: 24px 18px; }
+  .w3-display-bottomleft { background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,0)); width: 100%; padding: 24px 18px; }
 
     /* chips utility (used for languages/hobbies too) */
     .chip-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -88,13 +88,13 @@
     .social-row img { filter: grayscale(20%); transition: transform .15s ease, filter .2s ease; }
     .social-row img:hover { filter: none; transform: translateY(-2px) scale(1.03); }
 
-    /* dark mode */
+    /* dark mode: keep light theme for readability */
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #0b1220; --card: #0f172a; --text: #e5e7eb; --muted: #a1a1aa; --border: #1f2937; --chip-bg: #064e3b; --chip-fg: #a7f3d0; }
-      body.w3-light-grey { background: linear-gradient(180deg, #0b1220, #0f172a); }
+      :root { --bg: #f5f7fb; --card: #ffffff; --text: #111827; --muted: #374151; --border: #e5e7eb; --chip-bg: #e0f2f1; --chip-fg: #004d40; }
+      body.w3-light-grey { background: linear-gradient(180deg, var(--bg), #eef2f7); }
       .w3-white { background-color: var(--card) !important; color: var(--text); }
       .w3-text-grey { color: var(--text) !important; }
-      .w3-teal { background-color: #115e59 !important; }
+      .w3-teal { background-color: #14b8a6 !important; }
     }
 
     /* print-friendly */
