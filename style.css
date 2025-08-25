@@ -207,6 +207,10 @@ h6 {
   background: #e0f2f1;
 }
 .modern-footer {
+  width: 100%;
+  position: static;
+  margin-left: 0;
+  margin-right: 0;
   background: linear-gradient(90deg, #14b8a6 0%, #06b6d4 100%);
   color: #fff;
   padding: 32px 0 18px 0;
@@ -436,3 +440,13 @@ body {
   cursor: pointer;
 }
 /* --- End Enhanced Social Media Section Styles --- */
+/* --- Highlight Important Work Experience --- */
+.highlight {
+  background: linear-gradient(90deg, #e0f2f1 0%, #f5f7fb 100%);
+  border: 2px solid #14b8a6;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(20, 184, 166, 0.1);
+  padding: 18px 16px;
+  margin-bottom: 18px;
+}
+/* --- End Highlight --- */
